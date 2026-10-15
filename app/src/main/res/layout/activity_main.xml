@@ -169,6 +169,21 @@
         android:text="Baseline: abhi set nahi"
         android:textSize="16sp" />
 
+    <Switch
+        android:id="@+id/switchDaytimeWatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Din me bhi watch karo (24 ghante)"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Band rahe to sirf sham 6 se subha 8 tak watch hoga (Pakistan time)."
+        android:textSize="14sp" />
+
     <Button
         android:id="@+id/btnFbLogin"
         android:layout_width="match_parent"

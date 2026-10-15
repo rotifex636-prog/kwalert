@@ -65,6 +65,16 @@ class MainActivity : Activity() {
         val btnStartWatch: Button = findViewById(R.id.btnStartWatch)
         val btnStopWatch: Button = findViewById(R.id.btnStopWatch)
 
+        // --- v2.3: din me bhi watch (24 ghante) ka switch ---
+        val switchDaytime: android.widget.Switch = findViewById(R.id.switchDaytimeWatch)
+        val dayPrefs = getSharedPreferences(KwNotificationListener.PREFS_NAME, Context.MODE_PRIVATE)
+        switchDaytime.isChecked = dayPrefs.getBoolean(FbWatchService.KEY_DAYTIME_WATCH, false)
+        switchDaytime.setOnCheckedChangeListener { _, on ->
+            dayPrefs.edit().putBoolean(FbWatchService.KEY_DAYTIME_WATCH, on).apply()
+            val msg = if (on) "24 ghante watch on ho gaya" else "Sirf sham 6 se subha 8 tak watch hoga"
+            android.widget.Toast.makeText(this, msg, android.widget.Toast.LENGTH_SHORT).show()
+        }
+
         btnNotifAccess.setOnClickListener {
             openNotificationAccessSettings()
         }

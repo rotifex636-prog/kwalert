@@ -71,8 +71,10 @@ class FbWatchService : Service() {
         }
     }
 
-    /** Pakistan time (Asia/Karachi) me 18:00–08:00 ke darmiyan hai? */
+    /** Pakistan time (Asia/Karachi) me 18:00–08:00 ke darmiyan hai?
+     *  Agar "din me bhi watch" switch on hai to hamesha true. */
     private fun isWatchHour(): Boolean {
+        if (prefs().getBoolean(KEY_DAYTIME_WATCH, false)) return true
         val tz = java.util.TimeZone.getTimeZone("Asia/Karachi")
         val cal = java.util.Calendar.getInstance(tz)
         val hour = cal.get(java.util.Calendar.HOUR_OF_DAY)
@@ -444,6 +446,8 @@ class FbWatchService : Service() {
         const val KEY_FB_LAST_ALERTED_REEL = "fb_last_alerted_reel"
         const val KEY_FB_LAST_ALERTED_TIME = "fb_last_alerted_time"
         const val KEY_FB_EMPTY_STREAK = "fb_empty_streak"
+        // Din me bhi watch (24 ghante) ka override switch.
+        const val KEY_DAYTIME_WATCH = "daytime_watch"
 
         // Khali reads: itni lagatar khali reads par hi "login khatam"
         // warning dikhao — aik khali read aksar slow page load hota hai.
