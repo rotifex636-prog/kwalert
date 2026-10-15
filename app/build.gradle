@@ -5,7 +5,11 @@ plugins {
 
 // Persistent keystore — har build (debug + release) isi se sign hoga.
 // Password file se read hota hai, source me kabhi hardcode nahi.
-def storePass = new File("/home/hatch/workspace/android-keystore/.storepass").text.trim()
+// GitHub Actions par ye file nahi hoti — wahan default debug signing use hogi.
+def keystoreFile = new File("/home/hatch/workspace/android-keystore/proxypilot.jks")
+def passFile = new File("/home/hatch/workspace/android-keystore/.storepass")
+def hasPersistentKey = keystoreFile.exists() && passFile.exists()
+def storePass = hasPersistentKey ? passFile.text.trim() : ""
 
 android {
     namespace 'com.shani.kwalert2'
@@ -30,10 +34,11 @@ android {
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.persistent
+            // Local par persistent keystore, GitHub par default debug signing.
+            signingConfig hasPersistentKey ? signingConfigs.persistent : signingConfigs.debug
         }
         release {
-            signingConfig signingConfigs.persistent
+            signingConfig hasPersistentKey ? signingConfigs.persistent : signingConfigs.debug
             minifyEnabled false
         }
     }
