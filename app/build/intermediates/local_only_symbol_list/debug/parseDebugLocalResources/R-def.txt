@@ -1,0 +1,9 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher
+id btnNotifAccess
+id btnTest
+id tvLastAlert
+id tvStatus
+layout activity_main
+string app_name

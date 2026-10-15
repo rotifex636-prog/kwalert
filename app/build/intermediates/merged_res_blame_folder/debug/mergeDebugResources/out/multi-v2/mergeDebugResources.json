@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.shani.kwalert2.app-debug-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/hatch/workspace/kwalert2/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
+                    }
+                }
+            ]
+        }
+    ]
+}

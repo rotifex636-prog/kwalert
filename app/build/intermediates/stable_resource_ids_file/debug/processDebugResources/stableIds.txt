@@ -1,0 +1,7 @@
+com.shani.kwalert2:string/app_name = 0x7f040000
+com.shani.kwalert2:layout/activity_main = 0x7f030000
+com.shani.kwalert2:id/tvLastAlert = 0x7f020002
+com.shani.kwalert2:id/btnNotifAccess = 0x7f020000
+com.shani.kwalert2:id/tvStatus = 0x7f020003
+com.shani.kwalert2:id/btnTest = 0x7f020001
+com.shani.kwalert2:drawable/ic_launcher = 0x7f010000

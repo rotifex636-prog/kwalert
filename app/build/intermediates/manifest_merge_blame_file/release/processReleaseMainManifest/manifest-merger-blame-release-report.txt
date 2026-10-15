@@ -1,0 +1,107 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.shani.kwalert2"
+4    android:versionCode="8"
+5    android:versionName="2.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:4:5-77
+11-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:4:22-74
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:5:5-68
+12-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:5:22-65
+13    <!-- FB Watch: WebView ko internet + foreground service ki ijazat -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:7:5-67
+14-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:7:22-64
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:8:5-77
+15-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:8:22-74
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+16-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:9:5-87
+16-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:9:22-84
+17
+18    <application
+18-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:11:5-53:19
+19        android:allowBackup="true"
+19-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:12:9-35
+20        android:extractNativeLibs="true"
+21        android:icon="@drawable/ic_launcher"
+21-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:13:9-45
+22        android:label="@string/app_name"
+22-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:14:9-41
+23        android:roundIcon="@drawable/ic_launcher"
+23-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:15:9-50
+24        android:supportsRtl="true"
+24-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:16:9-35
+25        android:theme="@android:style/Theme.Material.Light.NoActionBar" >
+25-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:17:9-72
+26        <activity
+26-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:19:9-26:20
+27            android:name="com.shani.kwalert2.MainActivity"
+27-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:20:13-41
+28            android:exported="true" >
+28-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:21:13-36
+29            <intent-filter>
+29-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:22:13-25:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:23:17-69
+30-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:23:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:24:17-77
+32-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:24:27-74
+33            </intent-filter>
+34        </activity>
+35
+36        <!--
+37             FB login screen — user yahan khud login karta hai;
+38             session WebView ke cookies me rehta hai.
+39        -->
+40        <activity
+40-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:30:9-32:40
+41            android:name="com.shani.kwalert2.FbLoginActivity"
+41-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:31:13-44
+42            android:exported="false" />
+42-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:32:13-37
+43
+44        <!--
+45             Telegram ki notifications sunne wali service.
+46             Is ki permission sirf system de sakta hai; user Settings me
+47             "Notification access" de kar isay enable karta hai.
+48        -->
+49        <service
+49-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:37:9-44:19
+50            android:name="com.shani.kwalert2.KwNotificationListener"
+50-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:38:13-51
+51            android:exported="false"
+51-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:39:13-37
+52            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+52-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:40:13-87
+53            <intent-filter>
+53-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:41:13-43:29
+54                <action android:name="android.service.notification.NotificationListenerService" />
+54-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:42:17-99
+54-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:42:25-96
+55            </intent-filter>
+56        </service>
+57
+58        <!--
+59             FB Watch — har 30s par reels page check karne wali
+60             foreground service (persistent notification ke sath).
+61        -->
+62        <service
+62-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:48:9-51:56
+63            android:name="com.shani.kwalert2.FbWatchService"
+63-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:49:13-43
+64            android:exported="false"
+64-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:50:13-37
+65            android:foregroundServiceType="dataSync" />
+65-->/home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:51:13-53
+66    </application>
+67
+68</manifest>

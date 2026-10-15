@@ -1,0 +1,103 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:2:1-55:12
+	package
+		INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:4:5-77
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:4:22-74
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:5:5-68
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:5:22-65
+uses-permission#android.permission.INTERNET
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:8:5-77
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:8:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_DATA_SYNC
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:9:5-87
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:9:22-84
+application
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:11:5-53:19
+INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:11:5-53:19
+	android:extractNativeLibs
+		INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml
+	android:supportsRtl
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:16:9-35
+	android:label
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:14:9-41
+	android:roundIcon
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:15:9-50
+	android:icon
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:13:9-45
+	android:allowBackup
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:17:9-72
+activity#com.shani.kwalert2.MainActivity
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:19:9-26:20
+	android:exported
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:21:13-36
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:20:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:22:13-25:29
+action#android.intent.action.MAIN
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:24:17-77
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:24:27-74
+activity#com.shani.kwalert2.FbLoginActivity
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:30:9-32:40
+	android:exported
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:31:13-44
+service#com.shani.kwalert2.KwNotificationListener
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:37:9-44:19
+	android:exported
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:39:13-37
+	android:permission
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:40:13-87
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:38:13-51
+intent-filter#action:name:android.service.notification.NotificationListenerService
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:41:13-43:29
+action#android.service.notification.NotificationListenerService
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:42:17-99
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:42:25-96
+service#com.shani.kwalert2.FbWatchService
+ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:48:9-51:56
+	android:exported
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:50:13-37
+	android:foregroundServiceType
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:51:13-53
+	android:name
+		ADDED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml:49:13-43
+uses-sdk
+INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml
+INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/hatch/workspace/kwalert2/app/src/main/AndroidManifest.xml

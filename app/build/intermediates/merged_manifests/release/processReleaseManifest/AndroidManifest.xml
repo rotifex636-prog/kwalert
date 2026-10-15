@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shani.kwalert2"
+    android:versionCode="8"
+    android:versionName="2.2" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- FB Watch: WebView ko internet + foreground service ki ijazat -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <application
+        android:allowBackup="true"
+        android:extractNativeLibs="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar" >
+        <activity
+            android:name="com.shani.kwalert2.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+             FB login screen — user yahan khud login karta hai;
+             session WebView ke cookies me rehta hai.
+        -->
+        <activity
+            android:name="com.shani.kwalert2.FbLoginActivity"
+            android:exported="false" />
+
+        <!--
+             Telegram ki notifications sunne wali service.
+             Is ki permission sirf system de sakta hai; user Settings me
+             "Notification access" de kar isay enable karta hai.
+        -->
+        <service
+            android:name="com.shani.kwalert2.KwNotificationListener"
+            android:exported="false"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!--
+             FB Watch — har 30s par reels page check karne wali
+             foreground service (persistent notification ke sath).
+        -->
+        <service
+            android:name="com.shani.kwalert2.FbWatchService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+    </application>
+
+</manifest>

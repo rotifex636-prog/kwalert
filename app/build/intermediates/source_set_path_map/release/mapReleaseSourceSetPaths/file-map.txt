@@ -1,0 +1,7 @@
+com.shani.kwalert2.app-pngs-0 /home/hatch/workspace/kwalert2/app/build/generated/res/pngs/release
+com.shani.kwalert2.app-resValues-1 /home/hatch/workspace/kwalert2/app/build/generated/res/resValues/release
+com.shani.kwalert2.app-packageReleaseResources-2 /home/hatch/workspace/kwalert2/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
+com.shani.kwalert2.app-packageReleaseResources-3 /home/hatch/workspace/kwalert2/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
+com.shani.kwalert2.app-release-4 /home/hatch/workspace/kwalert2/app/build/intermediates/merged_res/release/mergeReleaseResources
+com.shani.kwalert2.app-main-5 /home/hatch/workspace/kwalert2/app/src/main/res
+com.shani.kwalert2.app-release-6 /home/hatch/workspace/kwalert2/app/src/release/res
