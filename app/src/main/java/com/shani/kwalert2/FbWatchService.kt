@@ -297,15 +297,15 @@ class FbWatchService : Service() {
         }
 
         // Pair baseline se mukhtalif hai — foran alert NAHI.
-        // PENDING-PAIR CONFIRMATION: nayi pair 2 lagatar successful
-        // checks me dikhe tabhi confirmed alert hoga. Aik dafa ki
-        // transient re-layout par jhooti awaz nahi ayegi.
+        // PENDING CONFIRMATION: naya tile-1 (nayi video) 2 lagatar
+        // successful checks me dikhe tabhi confirmed alert hoga.
+        // Sirf tile-1 ko dekho — tile-2 Facebook reshuffle kar deta hai,
+        // us par confirmation latak jata tha aur video miss ho jati thi.
         val storedP1 = prefs().getString(KEY_FB_PENDING_1, "").orEmpty()
-        val storedP2 = prefs().getString(KEY_FB_PENDING_2, "").orEmpty()
         val storedCount = prefs().getInt(KEY_FB_PENDING_COUNT, 0)
 
         val newCount: Int
-        if (storedCount > 0 && tile1 == storedP1 && tile2 == storedP2) {
+        if (storedCount > 0 && tile1 == storedP1) {
             newCount = storedCount + 1
         } else {
             // Pehli dafa ya koi teesri mukhtalif pair — pending reset.
